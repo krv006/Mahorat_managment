@@ -42,3 +42,4 @@ class ProjectAdmin(Base):
 @admin.register(Employee)
 class EmployeeAdmin(admin.ModelAdmin):
     pass
+
