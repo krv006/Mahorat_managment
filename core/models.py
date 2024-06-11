@@ -84,3 +84,9 @@ class Employee(Base):
     last_name = CharField(max_length=100)
     email = EmailField(max_length=100)
     phone_number = CharField(max_length=50)
+
+class Kamron(models.Model):
+    name = CharField(max_length=255)
+
+    def __str__(self) -> str:
+        return self.name
