@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 
 from core.models import Partner, News, Project

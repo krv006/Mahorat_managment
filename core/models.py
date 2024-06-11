@@ -33,11 +33,6 @@ class NewsImage(Base):
     image = ImageField(upload_to='news/')
 
 
-class Media(Model):
-    icon = CharField(max_length=255)
-    url = URLField(max_length=255)
-
-
 class Partner(Model):
     image = ImageField(upload_to='partners/')
     url = URLField(max_length=255)
@@ -60,15 +55,6 @@ class Website(Model):
     expert = ForeignKey('core.Expert', CASCADE, related_name='website')
 
 
-class Worker(Base):
-    full_name = CharField(max_length=50)
-    job = CharField(max_length=55)
-    image = ImageField(upload_to='workers/')
-
-    def __str__(self):
-        return self.full_name
-
-
 class Project(Base):
     title = CharField(max_length=355)
     description = TextField()
@@ -79,8 +65,44 @@ class Project(Base):
 
 
 class Employee(Base):
+    CONSUPTION_CHOISES_EMPLOYEE = [
+        (1, 'Tanlang'),
+        (2, '1 yildan kam'),
+        (3, '1 yildan ortiq'),
+        (4, '5 yildan kam'),
+        (5, '5 yildan ortiq'),
+    ]
+
+    LANGUAGE = [
+        (1, ('Tanlang')),
+        (2, ('Ingiliz tili')),
+        (3, ('Rus tili')),
+        (4, ("O'zbek tili")),
+    ]
+
+    TITLE = [
+        (1, 'Tanlang'),
+        (2, 'Dr.'),
+        (3, 'Prafessor'),
+        (4, 'Mutaxassis'),
+        (5, 'Janob.'),
+        (6, 'Miss.'),
+        (7, 'Xonim.'),
+    ]
+
+    LOYIHA = [
+        (1, 'QISQA MUDATGA'),
+        (2, 'UZOQ MUDATGA'),
+    ]
+
     title = CharField(max_length=25)
     first_name = CharField(max_length=100)
     last_name = CharField(max_length=100)
     email = EmailField(max_length=100)
     phone_number = CharField(max_length=50)
+    description = TextField()
+    status_employe = models.IntegerField(choices=CONSUPTION_CHOISES_EMPLOYEE, default=1)
+    choose_language = models.IntegerField(choices=LANGUAGE, default=1)
+    choose_title = models.IntegerField(choices=TITLE, default=1)
+    choose_loyiha = models.IntegerField(choices=LOYIHA, default=1)
+
