@@ -18,6 +18,9 @@ class Base(CreatedAtBase):
     # id = UUIDField(primary_key=True, db_default=RandomUUID(), editable=False) # postgres da ishlatiladi
     id = models.UUIDField(default=uuid.uuid4, primary_key=True)  # sqlite uchun basic
 
+    class Meta:
+        abstract = True
+
 
 class News(Base):
     title = CharField(max_length=355)
