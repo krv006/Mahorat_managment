@@ -33,11 +33,6 @@ class NewsImage(Base):
     image = ImageField(upload_to='news/')
 
 
-class Media(Model):
-    icon = CharField(max_length=255)
-    url = URLField(max_length=255)
-
-
 class Partner(Model):
     image = ImageField(upload_to='partners/')
     url = URLField(max_length=255)
@@ -60,15 +55,6 @@ class Website(Model):
     expert = ForeignKey('core.Expert', CASCADE, related_name='website')
 
 
-class Worker(Base):
-    full_name = CharField(max_length=50)
-    job = CharField(max_length=55)
-    image = ImageField(upload_to='workers/')
-
-    def __str__(self):
-        return self.full_name
-
-
 class Project(Base):
     title = CharField(max_length=355)
     description = TextField()
@@ -84,3 +70,9 @@ class Employee(Base):
     last_name = CharField(max_length=100)
     email = EmailField(max_length=100)
     phone_number = CharField(max_length=50)
+
+
+class Service(Base):
+    title = CharField(max_length=255)
+    description = CKEditor5Field()
+    image = ImageField(upload_to='service_icon/')
