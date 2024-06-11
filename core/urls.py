@@ -20,3 +20,4 @@ urlpatterns = [
     path("message/", MessageListAPIView.as_view()),
     path("emplyee/", EmployeeListAPIView.as_view()),
 ]
+
