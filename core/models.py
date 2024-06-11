@@ -64,12 +64,53 @@ class Project(Base):
         return self.title
 
 
-class Employee(Base):
-    title = CharField(max_length=25)
-    first_name = CharField(max_length=100)
-    last_name = CharField(max_length=100)
-    email = EmailField(max_length=100)
-    phone_number = CharField(max_length=50)
+class Employee(models.Model):
+    LANGUAGE = [
+        (1, "Tanlang"),
+        (2, "O'zbek tili"),
+        (3, "Ingiliz tili"),
+        (4, "Rus tili"),
+    ]
+
+    WORK_EXPERIENCE = [
+        (1, "Tanlang"),
+        (2, "1 yildan kam"),
+        (3, "1 yildan ortiq"),
+        (4, "3 yildan kam"),
+        (5, "3 yildan ortiq"),
+        (6, "5 yildan kam"),
+        (7, "5 yildan ortiq"),
+    ]
+
+    TITLE = [
+        (1, "Tanlang"),
+        (2, "Dr."),
+        (3, "Professor"),
+        (4, "Mutaxassis"),
+        (5, "Janob."),
+        (6, "Miss"),
+        (7, "Xonim.")
+    ]
+
+    CHOOSER_CHOICES = [
+        (0, ""),
+        (1, "Qisqa muddatga"),
+        (2, "Uzoq muddatga"),
+    ]
+
+    title = models.CharField(max_length=25)
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=100)
+    phone_number = models.CharField(max_length=50)
+    description = models.TextField()
+    choose_language = models.IntegerField(choices=LANGUAGE, default=1)
+    choose_experience = models.IntegerField(choices=WORK_EXPERIENCE, default=1)
+    choose_title = models.IntegerField(choices=TITLE, default=1)
+    choose_choices = models.IntegerField(choices=CHOOSER_CHOICES, default=0)
+
+    def __str__(self):
+        return f"{self.title} {self.first_name} {self.last_name}"
 
 
 class Service(Base):

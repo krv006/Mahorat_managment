@@ -46,4 +46,4 @@ class NewsRetrieveSerializer(ModelSerializer):
 class ProjectSerializer(ModelSerializer):
     class Meta:
         model = Project
-        fields = "__all__"
+        fields = "title", "description", "image"
