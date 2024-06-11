@@ -10,6 +10,7 @@ class Base(admin.ModelAdmin):
 class NewsImageAdmin(admin.StackedInline):
     model = NewsImage
     extra = 1
+    exclude = "id",
 
 
 @admin.register(News)
