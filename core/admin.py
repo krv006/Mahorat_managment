@@ -1,15 +1,40 @@
 from django.contrib import admin
 
-from core.models import News, NewsImage
+from core.models import News, NewsImage, Expert, ExpertWebsite, Partner, Project
+
+
+class Base(admin.ModelAdmin):
+    exclude = "id",
 
 
 class NewsImageAdmin(admin.StackedInline):
-    exclude = 'id',
     model = NewsImage
     extra = 1
 
 
 @admin.register(News)
-class NewsAdmin(admin.ModelAdmin):
-    exclude = 'id',
+class NewsAdmin(Base):
     inlines = NewsImageAdmin,
+
+
+class ExpertWebsiteAdmin(admin.StackedInline):
+    model = ExpertWebsite
+    can_delete = False
+    max_num = 1
+
+
+@admin.register(Expert)
+class ExpertAdmin(Base):
+    exclude = "website",
+    inlines = ExpertWebsiteAdmin,
+
+
+@admin.register(Partner)
+class PartnerAdmin(Base):
+    pass
+
+
+@admin.register(Project)
+class ProjectAdmin(Base):
+    pass
+

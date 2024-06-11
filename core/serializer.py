@@ -1,7 +1,10 @@
+from mailbox import Message
+
+from django.utils.text import Truncator
 from rest_framework.fields import SerializerMethodField
 from rest_framework.serializers import ModelSerializer
 
-from core.models import Partner, News, Project, NewsImage
+from core.models import Partner, News, Project, NewsImage, Expert, ExpertWebsite, Service, AboutUs, OurWorks
 
 
 class PartnerSerializer(ModelSerializer):
@@ -47,3 +50,53 @@ class ProjectSerializer(ModelSerializer):
     class Meta:
         model = Project
         fields = "title", "description", "image"
+
+    # class ProjectDetailSerializer(ModelSerializer):
+    #     description = SerializerMethodField()
+    #
+    #     class Meta:
+    #         model = Project
+    #         fields = ['image', 'title', 'description']
+
+    def get_description(self, obj):
+        description = obj.description
+        truncated_description = Truncator(description).words(20)
+        return truncated_description
+
+
+class ExpertWebsiteSerializer(ModelSerializer):
+    class Meta:
+        model = ExpertWebsite
+        fields = "facebook", "linkedin", "messenger"
+
+
+class ExpertSerializer(ModelSerializer):
+    websites = ExpertWebsiteSerializer(required=True)
+
+    class Meta:
+        model = Expert
+        exclude = "id", "website"
+
+
+class ServiceSerializer(ModelSerializer):
+    class Meta:
+        model = Service
+        exclude = "id",
+
+
+class AboutUsSerializer(ModelSerializer):
+    class Meta:
+        model = AboutUs
+        exclude = "id",
+
+
+class OurWorksSerializer(ModelSerializer):
+    class Meta:
+        model = OurWorks
+        fields = "__all__"
+
+
+class MessageSerializer(ModelSerializer):
+    class Meta:
+        model = Message
+        exclude = "id",

@@ -2,7 +2,7 @@ import uuid
 
 from django.db import models
 from django.db.models import Model, TextField, CharField, ImageField, URLField, DateTimeField, ForeignKey, CASCADE, \
-    TextChoices
+    TextChoices, OneToOneField
 from django_ckeditor_5.fields import CKEditor5Field
 from rest_framework.fields import EmailField
 
@@ -25,7 +25,10 @@ class Base(CreatedAtBase):
 
 class News(Base):
     title = CharField(max_length=355)
-    description = TextField()
+    description = CKEditor5Field()
+
+    class Meta:
+        verbose_name_plural = "News"
 
 
 class NewsImage(Base):
@@ -46,18 +49,20 @@ class Expert(Model):
     description = TextField()
     job = CharField(max_length=255)
     image = ImageField(upload_to='expert/')
+    website = models.OneToOneField('core.ExpertWebsite', CASCADE, null=True, blank=True,
+                                   related_name='experts')
 
 
-class Website(Model):
+class ExpertWebsite(Model):
     facebook = URLField(max_length=255, null=True, blank=True)
     linkedin = URLField(max_length=255, null=True, blank=True)
     messenger = URLField(max_length=255, null=True, blank=True)
-    expert = ForeignKey('core.Expert', CASCADE, related_name='website')
+    expert = models.OneToOneField("core.Expert", CASCADE, related_name='websites')
 
 
 class Project(Base):
     title = CharField(max_length=355)
-    description = TextField()
+    description = CKEditor5Field()
     image = ImageField(upload_to='projects/')
 
     def __str__(self):
@@ -113,7 +118,25 @@ class Employee(models.Model):
         return f"{self.title} {self.first_name} {self.last_name}"
 
 
-class Service(Base):
+class Service(Model):
     title = CharField(max_length=255)
     description = CKEditor5Field()
     image = ImageField(upload_to='service_icon/')
+
+
+class AboutUs(Model):
+    image = ImageField(upload_to='about_us')
+    description = CKEditor5Field()
+
+
+class OurWorks(Model):
+    title = CharField(max_length=255)
+    description = CKEditor5Field()
+    image = ImageField(upload_to='our_works/')
+
+
+class Message(Base):
+    full_name = CharField(max_length=255)
+    email = EmailField()
+    subject = CharField(max_length=255)
+    message = TextField()
