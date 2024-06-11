@@ -1,1 +1,7 @@
-..
+git stash
+git pull origin main
+git stash apply
+git add .
+git commit -m "Resolve merge conflicts"
+git push origin main
+x
