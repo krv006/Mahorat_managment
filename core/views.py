@@ -1,10 +1,9 @@
-from django.contrib.messages.storage.cookie import MessageSerializer
 from django.utils.text import Truncator
 from rest_framework.generics import ListAPIView, RetrieveAPIView, CreateAPIView
 
-from core.models import Partner, News, Project, Expert, Service, AboutUs, OurWorks, Message
+from core.models import Partner, News, Project, Expert, Service, AboutUs, OurWorks, Message, Employee
 from core.serializer import PartnerSerializer, NewsListSerializer, ProjectSerializer, NewsRetrieveSerializer, \
-    ExpertSerializer, ServiceSerializer, AboutUsSerializer, OurWorksSerializer
+    ExpertSerializer, ServiceSerializer, AboutUsSerializer, OurWorksSerializer, MessageSerializer, EmployeeSerializer
 
 
 class BaseTruncateDescriptionMixin:
@@ -54,7 +53,7 @@ class ServiceListAPIView(ListAPIView):
 
 
 class AboutUsListAPIView(ListAPIView):
-    queryset = AboutUs.objects.first()
+    queryset = AboutUs.objects.all()
     serializer_class = AboutUsSerializer
 
 
@@ -66,6 +65,11 @@ class OurWorksListAPIView(ListAPIView):
 class MessageListAPIView(CreateAPIView):
     queryset = Message.objects.all()
     serializer_class = MessageSerializer
+
+
+class EmployeeListAPIView(CreateAPIView):
+    queryset = Employee.objects.all()
+    serializer_class = EmployeeSerializer
 
 # class PartnerListAPIView(ListAPIView):
 #     queryset = Partner.objects.all()

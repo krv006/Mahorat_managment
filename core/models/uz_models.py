@@ -1,10 +1,8 @@
 import uuid
 
-from django.db import models
 from django.db.models import Model, TextField, CharField, ImageField, URLField, DateTimeField, ForeignKey, CASCADE, \
-    TextChoices, OneToOneField
+    UUIDField, OneToOneField, EmailField, IntegerField
 from django_ckeditor_5.fields import CKEditor5Field
-from rest_framework.fields import EmailField
 
 
 class CreatedAtBase(Model):
@@ -17,7 +15,7 @@ class CreatedAtBase(Model):
 
 class Base(CreatedAtBase):
     # id = UUIDField(primary_key=True, db_default=RandomUUID(), editable=False) # postgres da ishlatiladi
-    id = models.UUIDField(default=uuid.uuid4, primary_key=True)  # sqlite uchun basic
+    id = UUIDField(default=uuid.uuid4, primary_key=True)  # sqlite uchun basic
 
     class Meta:
         abstract = True
@@ -49,7 +47,7 @@ class Expert(Model):
     description = TextField()
     job = CharField(max_length=255)
     image = ImageField(upload_to='expert/')
-    website = models.OneToOneField('core.ExpertWebsite', CASCADE, null=True, blank=True,
+    website = OneToOneField('core.ExpertWebsite', CASCADE, null=True, blank=True,
                                    related_name='experts')
 
 
@@ -57,7 +55,7 @@ class ExpertWebsite(Model):
     facebook = URLField(max_length=255, null=True, blank=True)
     linkedin = URLField(max_length=255, null=True, blank=True)
     messenger = URLField(max_length=255, null=True, blank=True)
-    expert = models.OneToOneField("core.Expert", CASCADE, related_name='websites')
+    expert = OneToOneField("core.Expert", CASCADE, related_name='websites')
 
 
 class Project(Base):
@@ -69,7 +67,7 @@ class Project(Base):
         return self.title
 
 
-class Employee(models.Model):
+class Employee(Model):
     LANGUAGE = [
         (1, "Tanlang"),
         (2, "O'zbek tili"),
@@ -103,16 +101,15 @@ class Employee(models.Model):
         (2, "Uzoq muddatga"),
     ]
 
-    title = models.CharField(max_length=25)
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    email = models.EmailField(max_length=100)
-    phone_number = models.CharField(max_length=50)
-    description = models.TextField()
-    choose_language = models.IntegerField(choices=LANGUAGE, default=1)
-    choose_experience = models.IntegerField(choices=WORK_EXPERIENCE, default=1)
-    choose_title = models.IntegerField(choices=TITLE, default=1)
-    choose_choices = models.IntegerField(choices=CHOOSER_CHOICES, default=0)
+    first_name = CharField(max_length=100)
+    last_name = CharField(max_length=100)
+    email = EmailField(max_length=100)
+    phone_number = CharField(max_length=50)
+    language = IntegerField(max_length=25, choices=LANGUAGE, default=1)
+    experience = IntegerField(max_length=25, choices=WORK_EXPERIENCE, default=1)
+    title = IntegerField(max_length=25, choices=TITLE, default=1)
+    duration = IntegerField(max_length=25, choices=CHOOSER_CHOICES, default=0)
+    special_request = TextField()
 
     def __str__(self):
         return f"{self.title} {self.first_name} {self.last_name}"
@@ -125,7 +122,7 @@ class Service(Model):
 
 
 class AboutUs(Model):
-    image = ImageField(upload_to='about_us')
+    image = ImageField(upload_to='about_us/')
     description = CKEditor5Field()
 
 

@@ -1,10 +1,9 @@
-from mailbox import Message
-
 from django.utils.text import Truncator
 from rest_framework.fields import SerializerMethodField
 from rest_framework.serializers import ModelSerializer
 
-from core.models import Partner, News, Project, NewsImage, Expert, ExpertWebsite, Service, AboutUs, OurWorks
+from core.models import Partner, News, Project, NewsImage, Expert, ExpertWebsite, Service, AboutUs, OurWorks, Message, \
+    Employee
 
 
 class PartnerSerializer(ModelSerializer):
@@ -99,4 +98,10 @@ class OurWorksSerializer(ModelSerializer):
 class MessageSerializer(ModelSerializer):
     class Meta:
         model = Message
+        exclude = "id",
+
+
+class EmployeeSerializer(ModelSerializer):
+    class Meta:
+        model = Employee
         exclude = "id",
