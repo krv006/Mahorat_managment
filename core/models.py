@@ -14,7 +14,7 @@ class CreatedAtBase(Model):
     class Meta:
         abstract = True
 
-a
+
 class Base(CreatedAtBase):
     # id = UUIDField(primary_key=True, db_default=RandomUUID(), editable=False) # postgres da ishlatiladi
     id = models.UUIDField(default=uuid.uuid4, primary_key=True)  # sqlite uchun basic
@@ -79,8 +79,49 @@ class Project(Base):
 
 
 class Employee(Base):
+    LANGUAGE = [
+        (1, "Tanlang")
+        (2, "O'zbek tili")
+        (3, "Ingiliz tili")
+        (4, "Rus tili")
+    ]
+
+    WORK_EXPERIENCE = [
+        (1, "Tanlang"),
+        (2, "1 yildan kam"),
+        (3, "1 yildan ortiq"),
+        (4, "3 yildan kam")
+        (5, "3 yildan ortiq")
+        (6, "5 yildan kam")
+        (7, "5 yildan ortiq")
+    ]
+
+    TITLE = [
+        (1, "Tanlang"),
+        (2, "Dr."),
+        (3, "Professir"),
+        (4, "Mutaxassis"),
+        (5, "Janob."),
+        (6, "Miss"),
+        (7, "Xonim.")
+    ]
+
+    CHOOSER_CHOICES = [
+        (0, ""),
+        (1, "Qisqa mudatga"),
+        (2, "Uzoq mudatga"),
+    ]
+
     title = CharField(max_length=25)
     first_name = CharField(max_length=100)
     last_name = CharField(max_length=100)
     email = EmailField(max_length=100)
     phone_number = CharField(max_length=50)
+    description = TextField()
+    choose_language = IntegerField(choices=LANGUAGE, default=1)
+    choose_experience = IntegerField(choices=WORK_EXPERIENCE, default=1)
+    choose_title = IntegerField(choices=TITLE, default=1)
+    choose_choices = IntegerField(choices=CHOOSER_CHOICES, default=0)
+    
+    def __str__(self):
+        return self.title
