@@ -3,6 +3,7 @@ import uuid
 from django.db import models
 from django.db.models import Model, TextField, CharField, ImageField, URLField, DateTimeField, ForeignKey, CASCADE, \
     TextChoices
+from django_ckeditor_5.fields import CKEditor5Field
 from rest_framework.fields import EmailField
 
 
