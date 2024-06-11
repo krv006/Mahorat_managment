@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 from django.utils.text import Truncator
 from rest_framework.generics import ListAPIView, RetrieveAPIView, CreateAPIView
+=======
+from django.shortcuts import render
+from rest_framework.generics import ListAPIView, RetrieveAPIView
+>>>>>>> ef18812b7247eac6e4355ec9d6b34ff93ba7b7c5
 
 from core.models import Partner, News, Project, Expert, Service, AboutUs, OurWorks, Message, Employee
 from core.serializer import PartnerSerializer, NewsListSerializer, ProjectSerializer, NewsRetrieveSerializer, \
