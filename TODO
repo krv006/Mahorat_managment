@@ -4,4 +4,3 @@ git stash apply
 git add .
 git commit -m "Resolve merge conflicts"
 git push origin main
-x
