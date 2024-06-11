@@ -118,10 +118,10 @@ class Employee(Base):
     email = EmailField(max_length=100)
     phone_number = CharField(max_length=50)
     description = TextField()
-    choose_language = IntegerField(choices=LANGUAGE, default=1)
-    choose_experience = IntegerField(choices=WORK_EXPERIENCE, default=1)
-    choose_title = IntegerField(choices=TITLE, default=1)
-    choose_choices = IntegerField(choices=CHOOSER_CHOICES, default=0)
-    
+    choose_language = models.IntegerField(choices=LANGUAGE, default=1)
+    choose_experience = models.IntegerField(choices=WORK_EXPERIENCE, default=1)
+    choose_title = models.IntegerField(choices=TITLE, default=1)
+    choose_choices = models.IntegerField(choices=CHOOSER_CHOICES, default=0)
+
     def __str__(self):
         return self.title
