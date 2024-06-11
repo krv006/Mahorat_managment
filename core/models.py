@@ -14,7 +14,7 @@ class CreatedAtBase(Model):
     class Meta:
         abstract = True
 
-
+a
 class Base(CreatedAtBase):
     # id = UUIDField(primary_key=True, db_default=RandomUUID(), editable=False) # postgres da ishlatiladi
     id = models.UUIDField(default=uuid.uuid4, primary_key=True)  # sqlite uchun basic
