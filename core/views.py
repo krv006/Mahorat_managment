@@ -72,6 +72,11 @@ class EmployeeListAPIView(CreateAPIView):
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
 
+    def post(self, request, *args, **kwargs):
+        # shetta emailga jo'natiladi
+
+        return super().post(request, *args, **kwargs)
+
 
 class CountryListAPIView(ListAPIView):
     queryset = Country.objects.all()
@@ -81,4 +86,3 @@ class CountryListAPIView(ListAPIView):
 class StudyListAPIView(ListAPIView):
     queryset = Study.objects.all()
     serializer_class = StudySerializer
-
