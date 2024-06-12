@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from core.models import News, NewsImage, Expert, ExpertWebsite, Partner, Project, Employee
+from core.models import News, NewsImage, Expert, ExpertWebsite, Partner, Project, Employee, Message
 
 
 class Base(admin.ModelAdmin):
@@ -44,3 +44,7 @@ class ProjectAdmin(Base):
 class EmployeeAdmin(admin.ModelAdmin):
     pass
 
+
+@admin.register(Message)
+class MessageAdmin(Base):
+    pass

@@ -2,7 +2,7 @@ from django.urls import path
 
 from core.views import PartnerListAPIView, NewsListAPIView, ProjectListAPIView, NewsRetrieveAPIView, ExpertListAPIView, \
     ServiceListAPIView, ProjectDetailsAPIListView, AboutUsListAPIView, OurWorksListAPIView, MessageListAPIView, \
-    EmployeeListAPIView
+    EmployeeListAPIView, CountryListAPIView, StudyListAPIView
 
 urlpatterns = [
     path("news/<uuid:pk>", NewsRetrieveAPIView.as_view()),
@@ -19,5 +19,6 @@ urlpatterns = [
 
     path("message/", MessageListAPIView.as_view()),
     path("emplyee/", EmployeeListAPIView.as_view()),
+    path("countries/", CountryListAPIView.as_view()),
+    path("studies/", StudyListAPIView.as_view()),
 ]
-

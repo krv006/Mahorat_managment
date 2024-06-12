@@ -1,9 +1,10 @@
 from django.utils.text import Truncator
 from rest_framework.generics import ListAPIView, RetrieveAPIView, CreateAPIView
 
-from core.models import Partner, News, Project, Expert, Service, AboutUs, OurWorks, Message, Employee
+from core.models import Partner, News, Project, Expert, Service, AboutUs, OurWorks, Message, Employee, Country, Study
 from core.serializer import PartnerSerializer, NewsListSerializer, ProjectSerializer, NewsRetrieveSerializer, \
-    ExpertSerializer, ServiceSerializer, AboutUsSerializer, OurWorksSerializer, MessageSerializer, EmployeeSerializer
+    ExpertSerializer, ServiceSerializer, AboutUsSerializer, OurWorksSerializer, MessageSerializer, EmployeeSerializer, \
+    CountrySerializer, StudySerializer
 
 
 class BaseTruncateDescriptionMixin:
@@ -71,52 +72,13 @@ class EmployeeListAPIView(CreateAPIView):
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
 
-# class PartnerListAPIView(ListAPIView):
-#     queryset = Partner.objects.all()
-#     serializer_class = PartnerSerializer
-#
-#
-# class NewsListAPIView(ListAPIView):
-#     queryset = News.objects.all()
-#     serializer_class = NewsListSerializer
-#
-#
-# class NewsRetrieveAPIView(RetrieveAPIView):
-#     queryset = News.objects.all()
-#     serializer_class = NewsRetrieveSerializer
-#
-#
-# class ProjectListAPIView(ListAPIView):
-#     queryset = Project.objects.all()
-#     serializer_class = ProjectSerializer
-#
-#
-# class ProjectDetailsAPIListView(ListAPIView):
-#     queryset = Project.objects.all()
-#     serializer_class = ProjectSerializer
-#
-#     def get_queryset(self):
-#         qs = super().get_queryset()
-#         for project in qs:
-#             project.description = Truncator(project.description).words(40)
-#         return qs
-#
-#
-# class ExpertListAPIView(ListAPIView):
-#     queryset = Expert.objects.all()
-#     serializer_class = ExpertSerializer
-#
-#
-# class ServiceListAPIView(ListAPIView):
-#     queryset = Service.objects.all()
-#     serializer_class = ServiceSerializer
-#
-#
-# class AboutUsListAPIView(ListAPIView):
-#     queryset = AboutUs.objects.all()
-#     serializer_class = AboutUsSerializer
-#
-#
-# class OurWorksListAPIView(ListAPIView):
-#     queryset = OurWorks.objects.all()
-#     serializer_class = OurWorksSerializer
+
+class CountryListAPIView(ListAPIView):
+    queryset = Country.objects.all()
+    serializer_class = CountrySerializer
+
+
+class StudyListAPIView(ListAPIView):
+    queryset = Study.objects.all()
+    serializer_class = StudySerializer
+
