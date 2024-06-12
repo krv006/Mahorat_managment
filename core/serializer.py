@@ -49,7 +49,6 @@ class ProjectSerializer(ModelSerializer):
     class Meta:
         model = Project
         fields = "title", "description", "image"
-<<<<<<< Updated upstream
 
     # class ProjectDetailSerializer(ModelSerializer):
     #     description = SerializerMethodField()
@@ -106,5 +105,3 @@ class EmployeeSerializer(ModelSerializer):
     class Meta:
         model = Employee
         exclude = "id",
-=======
->>>>>>> Stashed changes
