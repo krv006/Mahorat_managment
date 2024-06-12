@@ -80,9 +80,9 @@ class Project(Base):
 
 class Employee(Base):
     LANGUAGE = [
-        (1, "Tanlang")
-        (2, "O'zbek tili")
-        (3, "Ingiliz tili")
+        (1, "Tanlang"),
+        (2, "O'zbek tili"),
+        (3, "Ingiliz tili"),
         (4, "Rus tili")
     ]
 
@@ -90,9 +90,9 @@ class Employee(Base):
         (1, "Tanlang"),
         (2, "1 yildan kam"),
         (3, "1 yildan ortiq"),
-        (4, "3 yildan kam")
-        (5, "3 yildan ortiq")
-        (6, "5 yildan kam")
+        (4, "3 yildan kam"),
+        (5, "3 yildan ortiq"),
+        (6, "5 yildan kam"),
         (7, "5 yildan ortiq")
     ]
 
@@ -122,6 +122,13 @@ class Employee(Base):
     choose_experience = models.IntegerField(choices=WORK_EXPERIENCE, default=1)
     choose_title = models.IntegerField(choices=TITLE, default=1)
     choose_choices = models.IntegerField(choices=CHOOSER_CHOICES, default=0)
+
+    def __str__(self):
+        return self.title
+
+
+class Country(Model):
+    title = CharField(max_length=355)
 
     def __str__(self):
         return self.title

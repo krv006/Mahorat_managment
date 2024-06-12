@@ -1,0 +1,163 @@
+[
+  {
+    "model": "core.Employee",
+    "pk": 1,
+    "fields": {
+      "title": "Tanlang"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 2,
+    "fields": {
+      "title": "110 000 - Pedagogika"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 3,
+    "fields": {
+      "title": "210 000 - Art"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 4,
+    "fields": {
+      "title": "220 000 - Gumanitar fanlar"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 5,
+    "fields": {
+      "title": "310 000 - Jurnalistika va Ijtimoiy axborot"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 6,
+    "fields": {
+      "title": "320 000 - Biznes va boshqaruv"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 7,
+    "fields": {
+      "title": "330 000 - To'g'ri"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 8,
+    "fields": {
+      "title": "410 000 - Tabiiy fanlar"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 9,
+    "fields": {
+      "title": "510 000 - Muhandislik fanlari"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 10,
+    "fields": {
+      "title": "520 000 - Kompyuter texnologiyalari va informatika"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 11,
+    "fields": {
+      "title": "530 000 - Ishlab chiqarish va qayta ishlash sanoati"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 12,
+    "fields": {
+      "title": "540 000 - Arxitektura va qurilish"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 13,
+    "fields": {
+      "title": "555 000 - Aloqa va axboratlashtirish, telekommunikatsiya texnologiyalari"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 14,
+    "fields": {
+      "title": "610 000 - Qishloq, o'rmon va baliq xo'jaligi"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 15,
+    "fields": {
+      "title": "620 000 - Qishloq xo'jaligi texnikasi"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 16,
+    "fields": {
+      "title": "620 000 - Qishloq xo'jaligi irrigatsiyasi va melirotsiyasi"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 17,
+    "fields": {
+      "title": "630 000 - Veterinariya tibbiyoti"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 18,
+    "fields": {
+      "title": "710 000 - Sog'liqni saqlash"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 19,
+    "fields": {
+      "title": "710 000 - Ijtimoiy ta'minot"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 20,
+    "fields": {
+      "title": "810 000 - Texnik xizmat ko'rsatish"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 21,
+    "fields": {
+      "title": "820 000 - Transport"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 22,
+    "fields": {
+      "title": "830 000 - Atrof-muhitni muhofaza qilish"
+    }
+  },
+  {
+    "model": "core.Employee",
+    "pk": 23,
+    "fields": {
+      "title": "840 000 - Hayot xavfsizligi"
+    }
+  }
+]

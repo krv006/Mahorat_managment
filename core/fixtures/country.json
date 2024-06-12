@@ -1,0 +1,534 @@
+[
+  {
+    "model": "app_name.book",
+    "pk": 1,
+    "fields": {
+      "title": "Afg'oniston"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 2,
+    "fields": {
+      "title": "Armaniston"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 3,
+    "fields": {
+      "title": "Ozarbayjon"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 4,
+    "fields": {
+      "title": "Bahrayn"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 5,
+    "fields": {
+      "title": "Bangladesh"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 6,
+    "fields": {
+      "title": "Butan"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 7,
+    "fields": {
+      "title": "Bruney"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 8,
+    "fields": {
+      "title": "Kambodja"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 9,
+    "fields": {
+      "title": "Xitoy"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 10,
+    "fields": {
+      "title": "Kipr"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 11,
+    "fields": {
+      "title": "Gruziya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 12,
+    "fields": {
+      "title": "Hindiston"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 13,
+    "fields": {
+      "title": "Indoneziya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 14,
+    "fields": {
+      "title": "Eron"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 15,
+    "fields": {
+      "title": "Iroq"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 16,
+    "fields": {
+      "title": "Isroil"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 17,
+    "fields": {
+      "title": "Yaponiya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 18,
+    "fields": {
+      "title": "Iordaniya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 19,
+    "fields": {
+      "title": "Qozog'iston"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 20,
+    "fields": {
+      "title": "Quvayt"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 21,
+    "fields": {
+      "title": "Qirg'iziston"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 22,
+    "fields": {
+      "title": "Laos"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 23,
+    "fields": {
+      "title": "Livan"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 24,
+    "fields": {
+      "title": "Malayziya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 25,
+    "fields": {
+      "title": "Maldiv orollari"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 26,
+    "fields": {
+      "title": "Mongoliya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 27,
+    "fields": {
+      "title": "Myanma"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 28,
+    "fields": {
+      "title": "Nepal"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 29,
+    "fields": {
+      "title": "Shimoliy Koreya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 30,
+    "fields": {
+      "title": "Ummon"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 31,
+    "fields": {
+      "title": "Pokiston"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 32,
+    "fields": {
+      "title": "Falastin"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 33,
+    "fields": {
+      "title": "Filippin"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 34,
+    "fields": {
+      "title": "Qatar"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 35,
+    "fields": {
+      "title": "Rossiya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 36,
+    "fields": {
+      "title": "Saudiya Arabistoni"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 37,
+    "fields": {
+      "title": "Singapur"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 38,
+    "fields": {
+      "title": "Janubiy Koreya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 39,
+    "fields": {
+      "title": "Shri-Lanka"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 40,
+    "fields": {
+      "title": "Suriya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 41,
+    "fields": {
+      "title": "Tayvan"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 42,
+    "fields": {
+      "title": "Tailand"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 43,
+    "fields": {
+      "title": "Tojikiston"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 44,
+    "fields": {
+      "title": "Turkmaniston"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 45,
+    "fields": {
+      "title": "Birlashgan Arab Amirliklari"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 46,
+    "fields": {
+      "title": "O'zbekiston"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 47,
+    "fields": {
+      "title": "Vyetnam"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 48,
+    "fields": {
+      "title": "Yaman"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 49,
+    "fields": {
+      "title": "Buyuk Britaniya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 50,
+    "fields": {
+      "title": "Germaniya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 51,
+    "fields": {
+      "title": "Fransiya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 52,
+    "fields": {
+      "title": "Italiya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 53,
+    "fields": {
+      "title": "Ispaniya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 54,
+    "fields": {
+      "title": "Niderlandiya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 55,
+    "fields": {
+      "title": "Belgiya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 56,
+    "fields": {
+      "title": "Shveytsariya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 57,
+    "fields": {
+      "title": "Avstriya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 58,
+    "fields": {
+      "title": "Shvetsiya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 59,
+    "fields": {
+      "title": "Norvegiya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 60,
+    "fields": {
+      "title": "Daniya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 61,
+    "fields": {
+      "title": "Finlandiya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 62,
+    "fields": {
+      "title": "Irlandiya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 63,
+    "fields": {
+      "title": "Gretsiya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 64,
+    "fields": {
+      "title": "Portugaliya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 65,
+    "fields": {
+      "title": "Polsha"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 66,
+    "fields": {
+      "title": "Chexiya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 67,
+    "fields": {
+      "title": "Vengriya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 68,
+    "fields": {
+      "title": "Avstraliya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 69,
+    "fields": {
+      "title": "Rossiya (g'arbiy qismi)"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 70,
+    "fields": {
+      "title": "Ukraina"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 71,
+    "fields": {
+      "title": "Ruminiya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 72,
+    "fields": {
+      "title": "Bolgariya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 73,
+    "fields": {
+      "title": "Xorvatiya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 74,
+    "fields": {
+      "title": "Serbiya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 75,
+    "fields": {
+      "title": "Slovakiya"
+    }
+  },
+  {
+    "model": "app_name.book",
+    "pk": 76,
+    "fields": {
+      "title": "Sloveniya"
+    }
+  }
+]
