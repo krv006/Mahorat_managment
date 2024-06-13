@@ -2,7 +2,9 @@ import uuid
 
 from django.db.models import Model, TextField, CharField, ImageField, URLField, DateTimeField, ForeignKey, CASCADE, \
     UUIDField, OneToOneField, EmailField, IntegerField
+from django.utils.translation import gettext_lazy as _
 from django_ckeditor_5.fields import CKEditor5Field
+from parler.models import TranslatableModel, TranslatedFields
 
 
 class CreatedAtBase(Model):
@@ -21,9 +23,11 @@ class Base(CreatedAtBase):
         abstract = True
 
 
-class News(Base):
-    title = CharField(max_length=355)
-    description = CKEditor5Field()
+class News(Base, TranslatableModel):
+    translations = TranslatedFields(
+        title=CharField(max_length=355),
+        description=CKEditor5Field(),
+    )
 
     class Meta:
         verbose_name_plural = "News"
@@ -38,14 +42,14 @@ class Partner(Model):
     image = ImageField(upload_to='partners/')
     url = URLField(max_length=255)
 
-    def __str__(self):
-        return self.url
 
+class Expert(TranslatableModel):
+    translation = TranslatedFields(
+        full_name=CharField(max_length=255),
+        description=TextField(),
+        job=CharField(max_length=255)
+    )
 
-class Expert(Model):
-    full_name = CharField(max_length=255)
-    description = TextField()
-    job = CharField(max_length=255)
     image = ImageField(upload_to='expert/')
     website = OneToOneField('core.ExpertWebsite', CASCADE, null=True, blank=True,
                             related_name='experts')
@@ -58,9 +62,11 @@ class ExpertWebsite(Model):
     expert = OneToOneField("core.Expert", CASCADE, related_name='websites')
 
 
-class Project(Base):
-    title = CharField(max_length=355)
-    description = CKEditor5Field()
+class Project(Base, TranslatableModel):
+    translation = TranslatedFields(
+        title=CharField(max_length=355),
+        description=CKEditor5Field()
+    )
     image = ImageField(upload_to='projects/')
 
     def __str__(self):
@@ -131,20 +137,26 @@ class Employee(Model):
         return f"{self.title} {self.first_name} {self.last_name}"
 
 
-class Service(Model):
-    title = CharField(max_length=255)
-    description = CKEditor5Field()
+class Service(TranslatableModel):
+    translation = TranslatedFields(
+        title=CharField(max_length=255),
+        description=CKEditor5Field()
+    )
     image = ImageField(upload_to='service_icon/')
 
 
-class AboutUs(Model):
+class AboutUs(TranslatableModel):
+    translation = TranslatedFields(
+        description=CKEditor5Field()
+    )
     image = ImageField(upload_to='about_us/')
-    description = CKEditor5Field()
 
 
-class OurWorks(Model):
-    title = CharField(max_length=255)
-    description = CKEditor5Field()
+class OurWorks(TranslatableModel):
+    translation = TranslatedFields(
+        title=CharField(max_length=255),
+        description=CKEditor5Field()
+    )
     image = ImageField(upload_to='our_works/')
 
 
@@ -153,5 +165,3 @@ class Message(Base):
     email = EmailField()
     subject = CharField(max_length=255)
     message = TextField()
-
-

@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     'core.apps.CoreConfig',
     'django_ckeditor_5',
+    'parler',
     'rest_framework'
 ]
 
@@ -31,6 +32,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'root.urls'
@@ -76,7 +78,27 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
+
+LANGUAGES = [
+    ('en', 'English'),
+    ('ru', 'Russian'),
+    ('uz-Latin', 'Uzbek-latin'),
+    ('uz-Cyrl', 'Uzbek-cyrl'),
+]
+
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en'},
+        {'code': 'ru'},
+        {'code': 'uz-Latin'},
+        {'code': 'uz-Cyrl'},
+    ),
+    'default': {
+        'fallbacks': ['uz'],
+        'hide_untranslated': False,
+    }
+}
 
 TIME_ZONE = 'UTC'
 

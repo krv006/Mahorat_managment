@@ -1,4 +1,5 @@
 from django.contrib import admin
+from parler.admin import TranslatableAdmin
 
 from core.models import News, NewsImage, Expert, ExpertWebsite, Partner, Project, Employee, Message
 
@@ -14,7 +15,8 @@ class NewsImageAdmin(admin.StackedInline):
 
 
 @admin.register(News)
-class NewsAdmin(Base):
+class NewsAdmin(TranslatableAdmin):
+    exclude = "id",
     inlines = NewsImageAdmin,
 
 
@@ -25,8 +27,8 @@ class ExpertWebsiteAdmin(admin.StackedInline):
 
 
 @admin.register(Expert)
-class ExpertAdmin(Base):
-    exclude = "website",
+class ExpertAdmin(TranslatableAdmin):
+    exclude = "website", "id"
     inlines = ExpertWebsiteAdmin,
 
 
@@ -36,8 +38,8 @@ class PartnerAdmin(Base):
 
 
 @admin.register(Project)
-class ProjectAdmin(Base):
-    pass
+class ProjectAdmin(TranslatableAdmin):
+    exclude = "id",
 
 
 @admin.register(Message)

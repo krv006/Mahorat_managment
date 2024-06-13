@@ -1,3 +1,4 @@
+from django.utils import translation
 from django.utils.text import Truncator
 from rest_framework.generics import ListAPIView, RetrieveAPIView, CreateAPIView
 
@@ -23,6 +24,15 @@ class NewsListAPIView(ListAPIView):
     queryset = News.objects.all()
     serializer_class = NewsListSerializer
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+
+        user_language = translation.get_language()
+        if user_language:
+            queryset = queryset.filter(translations__language_code=user_language)
+
+        return queryset
+
 
 class NewsRetrieveAPIView(RetrieveAPIView):
     queryset = News.objects.all()
@@ -33,34 +43,84 @@ class ProjectListAPIView(BaseTruncateDescriptionMixin, ListAPIView):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+
+        user_language = translation.get_language()
+        if user_language:
+            queryset = queryset.filter(translations__language_code=user_language)
+
+        return queryset
+
 
 class ProjectDetailsAPIListView(BaseTruncateDescriptionMixin, ListAPIView):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
 
     def get_queryset(self):
-        qs = super().get_queryset()
-        return self.truncate_description(qs)
+        queryset = super().get_queryset()
+
+        user_language = translation.get_language()
+        if user_language:
+            queryset = queryset.filter(translations__language_code=user_language)
+
+        return queryset
 
 
 class ExpertListAPIView(ListAPIView):
     queryset = Expert.objects.all()
     serializer_class = ExpertSerializer
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+
+        user_language = translation.get_language()
+        if user_language:
+            queryset = queryset.filter(translations__language_code=user_language)
+
+        return queryset
+
 
 class ServiceListAPIView(ListAPIView):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+
+        user_language = translation.get_language()
+        if user_language:
+            queryset = queryset.filter(translations__language_code=user_language)
+
+        return queryset
 
 
 class AboutUsListAPIView(ListAPIView):
     queryset = AboutUs.objects.all()
     serializer_class = AboutUsSerializer
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+
+        user_language = translation.get_language()
+        if user_language:
+            queryset = queryset.filter(translations__language_code=user_language)
+
+        return queryset
+
 
 class OurWorksListAPIView(ListAPIView):
     queryset = OurWorks.objects.all()
     serializer_class = OurWorksSerializer
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+
+        user_language = translation.get_language()
+        if user_language:
+            queryset = queryset.filter(translations__language_code=user_language)
+
+        return queryset
 
 
 class MessageListAPIView(CreateAPIView):
