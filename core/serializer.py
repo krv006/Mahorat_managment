@@ -3,7 +3,7 @@ from rest_framework.fields import SerializerMethodField
 from rest_framework.serializers import ModelSerializer
 
 from core.models import Partner, News, Project, NewsImage, Expert, ExpertWebsite, Service, AboutUs, OurWorks, Message, \
-    Employee
+    Employee, Country, Study
 
 
 class PartnerSerializer(ModelSerializer):
@@ -105,3 +105,15 @@ class EmployeeSerializer(ModelSerializer):
     class Meta:
         model = Employee
         exclude = "id",
+
+
+class CountrySerializer(ModelSerializer):
+    class Meta:
+        model = Country
+        fields = "__all__"
+
+
+class StudySerializer(ModelSerializer):
+    class Meta:
+        model = Study
+        fields = "__all__"

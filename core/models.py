@@ -1,10 +1,8 @@
 import uuid
 
-from django.db import models
 from django.db.models import Model, TextField, CharField, ImageField, URLField, DateTimeField, ForeignKey, CASCADE, \
-    TextChoices
+    UUIDField, OneToOneField, EmailField, IntegerField
 from django_ckeditor_5.fields import CKEditor5Field
-from rest_framework.fields import EmailField
 
 
 class CreatedAtBase(Model):
@@ -17,7 +15,7 @@ class CreatedAtBase(Model):
 
 class Base(CreatedAtBase):
     # id = UUIDField(primary_key=True, db_default=RandomUUID(), editable=False) # postgres da ishlatiladi
-    id = models.UUIDField(default=uuid.uuid4, primary_key=True)  # sqlite uchun basic
+    id = UUIDField(default=uuid.uuid4, primary_key=True)  # sqlite uchun basic
 
     class Meta:
         abstract = True
@@ -25,17 +23,15 @@ class Base(CreatedAtBase):
 
 class News(Base):
     title = CharField(max_length=355)
-    description = TextField()
+    description = CKEditor5Field()
+
+    class Meta:
+        verbose_name_plural = "News"
 
 
 class NewsImage(Base):
     news = ForeignKey('core.News', CASCADE, related_name='images')
     image = ImageField(upload_to='news/')
-
-
-class Media(Model):
-    icon = CharField(max_length=255)
-    url = URLField(max_length=255)
 
 
 class Partner(Model):
@@ -51,39 +47,46 @@ class Expert(Model):
     description = TextField()
     job = CharField(max_length=255)
     image = ImageField(upload_to='expert/')
+    website = OneToOneField('core.ExpertWebsite', CASCADE, null=True, blank=True,
+                            related_name='experts')
 
 
-class Website(Model):
+class ExpertWebsite(Model):
     facebook = URLField(max_length=255, null=True, blank=True)
     linkedin = URLField(max_length=255, null=True, blank=True)
     messenger = URLField(max_length=255, null=True, blank=True)
-    expert = ForeignKey('core.Expert', CASCADE, related_name='website')
-
-
-class Worker(Base):
-    full_name = CharField(max_length=50)
-    job = CharField(max_length=55)
-    image = ImageField(upload_to='workers/')
-
-    def __str__(self):
-        return self.full_name
+    expert = OneToOneField("core.Expert", CASCADE, related_name='websites')
 
 
 class Project(Base):
     title = CharField(max_length=355)
-    description = TextField()
+    description = CKEditor5Field()
     image = ImageField(upload_to='projects/')
 
     def __str__(self):
         return self.title
 
 
-class Employee(Base):
+class Country(Model):
+    title = CharField(max_length=100)
+
+    def __str__(self):
+        return self.title
+
+
+class Study(Model):
+    title = CharField(max_length=100)
+
+    def __str__(self):
+        return self.title
+
+
+class Employee(Model):
     LANGUAGE = [
         (1, "Tanlang"),
         (2, "O'zbek tili"),
         (3, "Ingiliz tili"),
-        (4, "Rus tili")
+        (4, "Rus tili"),
     ]
 
     WORK_EXPERIENCE = [
@@ -93,13 +96,13 @@ class Employee(Base):
         (4, "3 yildan kam"),
         (5, "3 yildan ortiq"),
         (6, "5 yildan kam"),
-        (7, "5 yildan ortiq")
+        (7, "5 yildan ortiq"),
     ]
 
     TITLE = [
         (1, "Tanlang"),
         (2, "Dr."),
-        (3, "Professir"),
+        (3, "Professor"),
         (4, "Mutaxassis"),
         (5, "Janob."),
         (6, "Miss"),
@@ -108,27 +111,47 @@ class Employee(Base):
 
     CHOOSER_CHOICES = [
         (0, ""),
-        (1, "Qisqa mudatga"),
-        (2, "Uzoq mudatga"),
+        (1, "Qisqa muddatga"),
+        (2, "Uzoq muddatga"),
     ]
 
-    title = CharField(max_length=25)
     first_name = CharField(max_length=100)
     last_name = CharField(max_length=100)
     email = EmailField(max_length=100)
     phone_number = CharField(max_length=50)
-    description = TextField()
-    choose_language = models.IntegerField(choices=LANGUAGE, default=1)
-    choose_experience = models.IntegerField(choices=WORK_EXPERIENCE, default=1)
-    choose_title = models.IntegerField(choices=TITLE, default=1)
-    choose_choices = models.IntegerField(choices=CHOOSER_CHOICES, default=0)
+    language = IntegerField(choices=LANGUAGE, default=1)
+    experience = IntegerField(choices=WORK_EXPERIENCE, default=1)
+    title = IntegerField(choices=TITLE, default=1)
+    duration = IntegerField(choices=CHOOSER_CHOICES, default=0)
+    special_request = TextField()
+    country = ForeignKey("core.Country", CASCADE)
+    study = ForeignKey("core.Study", CASCADE)
 
     def __str__(self):
-        return self.title
+        return f"{self.title} {self.first_name} {self.last_name}"
 
 
-class Country(Model):
-    title = CharField(max_length=355)
+class Service(Model):
+    title = CharField(max_length=255)
+    description = CKEditor5Field()
+    image = ImageField(upload_to='service_icon/')
 
-    def __str__(self):
-        return self.title
+
+class AboutUs(Model):
+    image = ImageField(upload_to='about_us/')
+    description = CKEditor5Field()
+
+
+class OurWorks(Model):
+    title = CharField(max_length=255)
+    description = CKEditor5Field()
+    image = ImageField(upload_to='our_works/')
+
+
+class Message(Base):
+    full_name = CharField(max_length=255)
+    email = EmailField()
+    subject = CharField(max_length=255)
+    message = TextField()
+
+
