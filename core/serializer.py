@@ -126,7 +126,7 @@ class ExpertSerializer(ModelSerializer):
         current_language = translation.get_language()
 
         if current_language:
-            translated_object = instance.translations.get(language_code=current_language)
+            translated_object = instance.translation.get(language_code=current_language)
             if translated_object:
                 data['full_name'] = translated_object.full_name
                 data['description'] = translated_object.description

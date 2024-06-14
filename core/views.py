@@ -76,7 +76,7 @@ class ExpertListAPIView(ListAPIView):
 
         user_language = translation.get_language()
         if user_language:
-            queryset = queryset.filter(translations__language_code=user_language)
+            queryset = queryset.filter(translation__language_code=user_language)
 
         return queryset
 
