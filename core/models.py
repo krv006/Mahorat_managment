@@ -165,3 +165,4 @@ class Message(Base):
     email = EmailField()
     subject = CharField(max_length=255)
     message = TextField()
+
