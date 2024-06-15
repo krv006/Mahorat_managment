@@ -1,6 +1,6 @@
 from django.urls import path
 
-from core.views import PartnerListAPIView, NewsListAPIView, ProjectListAPIView, NewsRetrieveAPIView, ExpertListAPIView, \
+from apps.views import PartnerListAPIView, NewsListAPIView, ProjectListAPIView, NewsRetrieveAPIView, ExpertListAPIView, \
     ServiceListAPIView, ProjectDetailsAPIListView, AboutUsListAPIView, OurWorksListAPIView, MessageListAPIView, \
     EmployeeListAPIView, CountryListAPIView, StudyListAPIView
 

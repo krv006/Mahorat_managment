@@ -34,7 +34,7 @@ class News(Base, TranslatableModel):
 
 
 class NewsImage(Base):
-    news = ForeignKey('core.News', CASCADE, related_name='images')
+    news = ForeignKey('apps.News', CASCADE, related_name='images')
     image = ImageField(upload_to='news/')
 
 
@@ -51,7 +51,7 @@ class Expert(TranslatableModel):
     )
 
     image = ImageField(upload_to='expert/')
-    website = OneToOneField('core.ExpertWebsite', CASCADE, null=True, blank=True,
+    website = OneToOneField('apps.ExpertWebsite', CASCADE, null=True, blank=True,
                             related_name='experts')
 
 
@@ -59,7 +59,7 @@ class ExpertWebsite(Model):
     facebook = URLField(max_length=255, null=True, blank=True)
     linkedin = URLField(max_length=255, null=True, blank=True)
     messenger = URLField(max_length=255, null=True, blank=True)
-    expert = OneToOneField("core.Expert", CASCADE, related_name='websites')
+    expert = OneToOneField("apps.Expert", CASCADE, related_name='websites')
 
 
 class Project(Base, TranslatableModel):
@@ -130,8 +130,8 @@ class Employee(Model):
     title = IntegerField(choices=TITLE, default=1)
     duration = IntegerField(choices=CHOOSER_CHOICES, default=0)
     special_request = TextField()
-    country = ForeignKey("core.Country", CASCADE)
-    study = ForeignKey("core.Study", CASCADE)
+    country = ForeignKey("apps.Country", CASCADE)
+    study = ForeignKey("apps.Study", CASCADE)
 
     def __str__(self):
         return f"{self.title} {self.first_name} {self.last_name}"

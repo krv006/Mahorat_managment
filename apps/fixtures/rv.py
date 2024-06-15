@@ -56,7 +56,7 @@ learning = [
 json_list = []
 for i, learning in enumerate(learning, start=1):
     json_list.append({
-        "model": "core.Employee",
+        "model": "apps.Employee",
         "pk": i,
         "fields": {
             "title": learning

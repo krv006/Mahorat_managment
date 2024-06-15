@@ -18,7 +18,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'drf_yasg',
-    'core.apps.CoreConfig',
+    'apps.apps.appsConfig',
     'django_ckeditor_5',
     'parler',
     'rest_framework'
@@ -107,9 +107,9 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR / 'core/static/')
+STATIC_ROOT = os.path.join(BASE_DIR / 'apps/static/')
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR / 'core/media/')
+MEDIA_ROOT = os.path.join(BASE_DIR / 'apps/media/')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

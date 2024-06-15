@@ -1,531 +1,531 @@
 [
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 1,
     "fields": {
       "title": "Afg'oniston"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 2,
     "fields": {
       "title": "Armaniston"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 3,
     "fields": {
       "title": "Ozarbayjon"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 4,
     "fields": {
       "title": "Bahrayn"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 5,
     "fields": {
       "title": "Bangladesh"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 6,
     "fields": {
       "title": "Butan"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 7,
     "fields": {
       "title": "Bruney"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 8,
     "fields": {
       "title": "Kambodja"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 9,
     "fields": {
       "title": "Xitoy"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 10,
     "fields": {
       "title": "Kipr"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 11,
     "fields": {
       "title": "Gruziya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 12,
     "fields": {
       "title": "Hindiston"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 13,
     "fields": {
       "title": "Indoneziya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 14,
     "fields": {
       "title": "Eron"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 15,
     "fields": {
       "title": "Iroq"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 16,
     "fields": {
       "title": "Isroil"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 17,
     "fields": {
       "title": "Yaponiya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 18,
     "fields": {
       "title": "Iordaniya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 19,
     "fields": {
       "title": "Qozog'iston"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 20,
     "fields": {
       "title": "Quvayt"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 21,
     "fields": {
       "title": "Qirg'iziston"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 22,
     "fields": {
       "title": "Laos"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 23,
     "fields": {
       "title": "Livan"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 24,
     "fields": {
       "title": "Malayziya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 25,
     "fields": {
       "title": "Maldiv orollari"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 26,
     "fields": {
       "title": "Mongoliya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 27,
     "fields": {
       "title": "Myanma"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 28,
     "fields": {
       "title": "Nepal"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 29,
     "fields": {
       "title": "Shimoliy Koreya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 30,
     "fields": {
       "title": "Ummon"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 31,
     "fields": {
       "title": "Pokiston"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 32,
     "fields": {
       "title": "Falastin"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 33,
     "fields": {
       "title": "Filippin"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 34,
     "fields": {
       "title": "Qatar"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 35,
     "fields": {
       "title": "Rossiya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 36,
     "fields": {
       "title": "Saudiya Arabistoni"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 37,
     "fields": {
       "title": "Singapur"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 38,
     "fields": {
       "title": "Janubiy Koreya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 39,
     "fields": {
       "title": "Shri-Lanka"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 40,
     "fields": {
       "title": "Suriya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 41,
     "fields": {
       "title": "Tayvan"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 42,
     "fields": {
       "title": "Tailand"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 43,
     "fields": {
       "title": "Tojikiston"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 44,
     "fields": {
       "title": "Turkmaniston"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 45,
     "fields": {
       "title": "Birlashgan Arab Amirliklari"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 46,
     "fields": {
       "title": "O'zbekiston"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 47,
     "fields": {
       "title": "Vyetnam"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 48,
     "fields": {
       "title": "Yaman"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 49,
     "fields": {
       "title": "Buyuk Britaniya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 50,
     "fields": {
       "title": "Germaniya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 51,
     "fields": {
       "title": "Fransiya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 52,
     "fields": {
       "title": "Italiya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 53,
     "fields": {
       "title": "Ispaniya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 54,
     "fields": {
       "title": "Niderlandiya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 55,
     "fields": {
       "title": "Belgiya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 56,
     "fields": {
       "title": "Shveytsariya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 57,
     "fields": {
       "title": "Avstriya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 58,
     "fields": {
       "title": "Shvetsiya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 59,
     "fields": {
       "title": "Norvegiya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 60,
     "fields": {
       "title": "Daniya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 61,
     "fields": {
       "title": "Finlandiya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 62,
     "fields": {
       "title": "Irlandiya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 63,
     "fields": {
       "title": "Gretsiya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 64,
     "fields": {
       "title": "Portugaliya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 65,
     "fields": {
       "title": "Polsha"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 66,
     "fields": {
       "title": "Chexiya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 67,
     "fields": {
       "title": "Vengriya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 68,
     "fields": {
       "title": "Avstraliya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 69,
     "fields": {
       "title": "Rossiya (g'arbiy qismi)"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 70,
     "fields": {
       "title": "Ukraina"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 71,
     "fields": {
       "title": "Ruminiya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 72,
     "fields": {
       "title": "Bolgariya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 73,
     "fields": {
       "title": "Xorvatiya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 74,
     "fields": {
       "title": "Serbiya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 75,
     "fields": {
       "title": "Slovakiya"
     }
   },
   {
-    "model": "core.Country",
+    "model": "apps.Country",
     "pk": 76,
     "fields": {
       "title": "Sloveniya"

@@ -3,7 +3,7 @@ from django.utils.text import Truncator
 from rest_framework.fields import SerializerMethodField
 from rest_framework.serializers import ModelSerializer
 from parler.forms import TranslatedField
-from core.models import Partner, News, Project, NewsImage, Expert, ExpertWebsite, Service, AboutUs, OurWorks, Message, \
+from apps.models import Partner, News, Project, NewsImage, Expert, ExpertWebsite, Service, AboutUs, OurWorks, Message, \
     Employee, Country, Study
 
 

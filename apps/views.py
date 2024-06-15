@@ -2,8 +2,8 @@ from django.utils import translation
 from django.utils.text import Truncator
 from rest_framework.generics import ListAPIView, RetrieveAPIView, CreateAPIView
 
-from core.models import Partner, News, Project, Expert, Service, AboutUs, OurWorks, Message, Employee, Country, Study
-from core.serializer import PartnerSerializer, NewsListSerializer, ProjectSerializer, NewsRetrieveSerializer, \
+from apps.models import Partner, News, Project, Expert, Service, AboutUs, OurWorks, Message, Employee, Country, Study
+from apps.serializer import PartnerSerializer, NewsListSerializer, ProjectSerializer, NewsRetrieveSerializer, \
     ExpertSerializer, ServiceSerializer, AboutUsSerializer, OurWorksSerializer, MessageSerializer, EmployeeSerializer, \
     CountrySerializer, StudySerializer
 

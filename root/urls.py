@@ -31,7 +31,7 @@ urlpatterns = [
 urlpatterns += i18n_patterns(
     path('', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('admin/', admin.site.urls),
-    path('', include('core.urls')),
+    path('', include('apps.urls')),
     path("ckeditor5/", include('django_ckeditor_5.urls')),
 )
 

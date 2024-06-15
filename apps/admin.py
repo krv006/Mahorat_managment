@@ -1,7 +1,7 @@
 from django.contrib import admin
 from parler.admin import TranslatableAdmin
 
-from core.models import News, NewsImage, Expert, ExpertWebsite, Partner, Project, Employee, Message
+from apps.models import News, NewsImage, Expert, ExpertWebsite, Partner, Project, Employee, Message
 
 
 class Base(admin.ModelAdmin):
