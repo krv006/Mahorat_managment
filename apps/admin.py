@@ -14,6 +14,7 @@ class NewsImageAdmin(admin.StackedInline):
     exclude = "id",
 
 
+
 @admin.register(News)
 class NewsAdmin(TranslatableAdmin):
     exclude = "id",
