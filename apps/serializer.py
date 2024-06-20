@@ -189,3 +189,4 @@ class StudySerializer(ModelSerializer):
     class Meta:
         model = Study
         fields = "__all__"
+
