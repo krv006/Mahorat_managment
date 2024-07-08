@@ -3,159 +3,152 @@
     "model": "apps.Study",
     "pk": 1,
     "fields": {
-      "title": "Tanlang"
+      "title": "110 000 - Pedagogika"
     }
   },
   {
     "model": "apps.Study",
     "pk": 2,
     "fields": {
-      "title": "110 000 - Pedagogika"
+      "title": "210 000 - Art"
     }
   },
   {
     "model": "apps.Study",
     "pk": 3,
     "fields": {
-      "title": "210 000 - Art"
+      "title": "220 000 - Gumanitar fanlar"
     }
   },
   {
     "model": "apps.Study",
     "pk": 4,
     "fields": {
-      "title": "220 000 - Gumanitar fanlar"
+      "title": "310 000 - Jurnalistika va Ijtimoiy axborot"
     }
   },
   {
     "model": "apps.Study",
     "pk": 5,
     "fields": {
-      "title": "310 000 - Jurnalistika va Ijtimoiy axborot"
+      "title": "320 000 - Biznes va boshqaruv"
     }
   },
   {
     "model": "apps.Study",
     "pk": 6,
     "fields": {
-      "title": "320 000 - Biznes va boshqaruv"
+      "title": "330 000 - To'g'ri"
     }
   },
   {
     "model": "apps.Study",
     "pk": 7,
     "fields": {
-      "title": "330 000 - To'g'ri"
+      "title": "410 000 - Tabiiy fanlar"
     }
   },
   {
     "model": "apps.Study",
     "pk": 8,
     "fields": {
-      "title": "410 000 - Tabiiy fanlar"
+      "title": "510 000 - Muhandislik fanlari"
     }
   },
   {
     "model": "apps.Study",
     "pk": 9,
     "fields": {
-      "title": "510 000 - Muhandislik fanlari"
+      "title": "520 000 - Kompyuter texnologiyalari va informatika"
     }
   },
   {
     "model": "apps.Study",
     "pk": 10,
     "fields": {
-      "title": "520 000 - Kompyuter texnologiyalari va informatika"
+      "title": "530 000 - Ishlab chiqarish va qayta ishlash sanoati"
     }
   },
   {
     "model": "apps.Study",
     "pk": 11,
     "fields": {
-      "title": "530 000 - Ishlab chiqarish va qayta ishlash sanoati"
+      "title": "540 000 - Arxitektura va qurilish"
     }
   },
   {
     "model": "apps.Study",
     "pk": 12,
     "fields": {
-      "title": "540 000 - Arxitektura va qurilish"
+      "title": "555 000 - Aloqa va axboratlashtirish, telekommunikatsiya texnologiyalari"
     }
   },
   {
     "model": "apps.Study",
     "pk": 13,
     "fields": {
-      "title": "555 000 - Aloqa va axboratlashtirish, telekommunikatsiya texnologiyalari"
+      "title": "610 000 - Qishloq, o'rmon va baliq xo'jaligi"
     }
   },
   {
     "model": "apps.Study",
     "pk": 14,
     "fields": {
-      "title": "610 000 - Qishloq, o'rmon va baliq xo'jaligi"
+      "title": "620 000 - Qishloq xo'jaligi texnikasi"
     }
   },
   {
     "model": "apps.Study",
     "pk": 15,
     "fields": {
-      "title": "620 000 - Qishloq xo'jaligi texnikasi"
+      "title": "620 000 - Qishloq xo'jaligi irrigatsiyasi va melirotsiyasi"
     }
   },
   {
     "model": "apps.Study",
     "pk": 16,
     "fields": {
-      "title": "620 000 - Qishloq xo'jaligi irrigatsiyasi va melirotsiyasi"
+      "title": "630 000 - Veterinariya tibbiyoti"
     }
   },
   {
     "model": "apps.Study",
     "pk": 17,
     "fields": {
-      "title": "630 000 - Veterinariya tibbiyoti"
+      "title": "710 000 - Sog'liqni saqlash"
     }
   },
   {
     "model": "apps.Study",
     "pk": 18,
     "fields": {
-      "title": "710 000 - Sog'liqni saqlash"
-    }
-  },
-  {
-    "model": "apps.Study",
-    "pk": 19,
-    "fields": {
       "title": "710 000 - Ijtimoiy ta'minot"
     }
   },
   {
     "model": "apps.Study",
-    "pk": 20,
+    "pk": 29,
     "fields": {
       "title": "810 000 - Texnik xizmat ko'rsatish"
     }
   },
   {
     "model": "apps.Study",
-    "pk": 21,
+    "pk": 20,
     "fields": {
       "title": "820 000 - Transport"
     }
   },
   {
     "model": "apps.Study",
-    "pk": 22,
+    "pk": 21,
     "fields": {
       "title": "830 000 - Atrof-muhitni muhofaza qilish"
     }
   },
   {
     "model": "apps.Study",
-    "pk": 23,
+    "pk": 22,
     "fields": {
       "title": "840 000 - Hayot xavfsizligi"
     }

@@ -1,11 +1,14 @@
 from django.utils import translation
 from django.utils.text import Truncator
+from drf_yasg.openapi import Response
 from rest_framework.generics import ListAPIView, RetrieveAPIView, CreateAPIView
 
 from apps.models import Partner, News, Project, Expert, Service, AboutUs, OurWorks, Message, Employee, Country, Study
 from apps.serializer import PartnerSerializer, NewsListSerializer, ProjectSerializer, NewsRetrieveSerializer, \
     ExpertSerializer, ServiceSerializer, AboutUsSerializer, OurWorksSerializer, MessageSerializer, EmployeeSerializer, \
     CountrySerializer, StudySerializer
+from apps.tasks import send_email
+from root.settings import EMAIL_HOST_USER
 
 
 class BaseTruncateDescriptionMixin:
@@ -123,19 +126,26 @@ class OurWorksListAPIView(ListAPIView):
         return queryset
 
 
-class MessageListAPIView(CreateAPIView):
+class MessageCreateAPIView(CreateAPIView):
     queryset = Message.objects.all()
     serializer_class = MessageSerializer
 
 
-class EmployeeListAPIView(CreateAPIView):
+class EmployeeCreateAPIView(CreateAPIView):
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
 
     def post(self, request, *args, **kwargs):
-        # shetta emailga jo'natiladi
+        data = super().post(request, *args, **kwargs)
+        message = (f"Yangi ishchi:\nIsmi: {data.data['first_name']},\nFamiliyasi: {data.data['last_name']}\n"
+                   f"Email adresi: {data.data['email']}\nTelefon raqami: {data.data['phone_number']}\n"
+                   f"Tili: {data.data['language']}\nTajribasi: {data.data['experience']}\n"
+                   f"Shaxsi: {data.data['title']}\nIsh davomiyligi: {data.data['duration']}\n"
+                   f"Xabar: {data.data['special_request']}\nDavlati: {Country.objects.get(pk=data.data['country'])}\n"
+                   f"Ta'lim yo'nalishi: {Study.objects.get(pk=data.data['study'])}")
 
-        return super().post(request, *args, **kwargs)
+        send_email.delay(EMAIL_HOST_USER, message)
+        return data
 
 
 class CountryListAPIView(ListAPIView):

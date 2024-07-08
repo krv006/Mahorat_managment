@@ -1,8 +1,8 @@
 from django.urls import path
 
 from apps.views import PartnerListAPIView, NewsListAPIView, ProjectListAPIView, NewsRetrieveAPIView, ExpertListAPIView, \
-    ServiceListAPIView, ProjectDetailsAPIListView, AboutUsListAPIView, OurWorksListAPIView, MessageListAPIView, \
-    EmployeeListAPIView, CountryListAPIView, StudyListAPIView
+    ServiceListAPIView, ProjectDetailsAPIListView, AboutUsListAPIView, OurWorksListAPIView, MessageCreateAPIView, \
+    EmployeeCreateAPIView, CountryListAPIView, StudyListAPIView
 
 urlpatterns = [
     path("news/<uuid:pk>", NewsRetrieveAPIView.as_view()),
@@ -17,8 +17,8 @@ urlpatterns = [
     path("about-us/", AboutUsListAPIView.as_view()),
     path("our-works/", OurWorksListAPIView.as_view()),
 
-    path("message/", MessageListAPIView.as_view()),
-    path("emplyee/", EmployeeListAPIView.as_view()),
+    path("message/", MessageCreateAPIView.as_view()),
+    path("emplyee/", EmployeeCreateAPIView.as_view()),
     path("countries/", CountryListAPIView.as_view()),
     path("studies/", StudyListAPIView.as_view()),
 ]
